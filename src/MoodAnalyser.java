@@ -1,6 +1,20 @@
 public class MoodAnalyser {
-    public String analyseMood(String message) {
-        if (message.toLowerCase().contains("sad")) {
+    private String message;
+    public MoodAnalyser() {
+    }
+    public MoodAnalyser(String message) {
+        this.message = message;
+    }
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String analyseMood() {
+        if (message != null && message.toLowerCase().contains("sad")) {
             return "SAD";
         } else {
             return "HAPPY";
